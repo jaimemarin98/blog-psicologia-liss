@@ -9,11 +9,11 @@ import { Section5FinalReflectionsComponent } from './components/section5-final-r
 
 export const routes: Routes = [
     { path: '',  component: Section1AnalysisComponent },
-  { path: 'section1', component: Section1AnalysisComponent },
+  { path: '', component: Section1AnalysisComponent },
   { path: 'section2', component: Section2AdolescenceComponent },
   { path: 'section3', component: Section3AdulthoodComponent },
   { path: 'section4', component: Section4AcademicJournalComponent },
   { path: 'section5', component: Section5FinalReflectionsComponent },
   // Redirige cualquier otra ruta a blog/section1
-  { path: '**', redirectTo: '/section1' }
+  { path: '**', redirectTo: '' }
 ];
