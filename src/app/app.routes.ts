@@ -8,7 +8,7 @@ import { Section5FinalReflectionsComponent } from './components/section5-final-r
 
 
 export const routes: Routes = [
-    { path: '', redirectTo: '/section1', pathMatch: 'full' },
+    { path: '',  component: Section1AnalysisComponent },
   { path: 'section1', component: Section1AnalysisComponent },
   { path: 'section2', component: Section2AdolescenceComponent },
   { path: 'section3', component: Section3AdulthoodComponent },
