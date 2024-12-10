@@ -1,0 +1,62 @@
+<section id="section4" class="section">
+    <h2>Bitácora </h2>
+
+    <div class="imagenes">
+        <img src="assets/img/bitacora.jfif" alt="adolescencia" />
+        <img src="assets/img/bitacora2.png" alt="adolescencia" />
+    </div>
+
+    <br>
+    <br>
+    <h5>PodCast Acontecimientos evolutivos en la adolescencia</h5>
+    <!-- Agregar el enlace para abrir el modal -->
+    <div class="imagenes">
+        <a href="#" (click)="openModal($event)">Ver PodCast</a>
+    </div>
+    <p>
+        <b>¿Cuáles se pueden considerar los conceptos importantes desarrollados y por qué?</b>
+        <br>
+        Considero que los conceptos más importantes desarrollados incluyen los cambios físicos y hormonales, las diferencias entre hombres y mujeres durante la adolescencia y el impacto de estos en las emociones y el desarrollo social. Estos temas son esenciales porque explican cómo la transformación biológica afecta la forma en que los adolescentes perciben y se relacionan con el mundo, marcando la base para su transición a la adultez.
+    </p>
+
+    <br>
+    <br>
+    <p>
+        <b>¿Cuál fue el concepto, idea, tema que fue más complejo comprender y por qué?</b>
+        <br>
+        El tema más complejo de comprender fue la interacción entre los cambios hormonales y las reacciones emocionales. Aunque entiendo que las hormonas influyen directamente en el estado emocional, fue difícil analizar cómo estas afectan de manera diferenciada a hombres y mujeres y cómo estas diferencias pueden variar según factores individuales y contextuales. Esto exige una mirada más integrada entre biología, psicología y entorno social.
+    </p>
+
+    <br>
+    <br>
+    <p>
+        <b>¿En qué aspectos teóricos se debe profundizar?</b>
+        <br>
+        Creo que se debe profundizar en el estudio de cómo los contextos sociales y culturales moldean las experiencias de los adolescentes durante esta etapa. También sería útil ahondar en teorías sobre el desarrollo emocional y su relación con el bienestar psicológico, ya que entender mejor estas áreas ayudaría a abordar los desafíos emocionales que enfrentan los adolescentes de manera más efectiva.
+    </p>
+
+    <br>
+    <br>
+    <p>
+        <b>¿Cómo lo aprendido se puede reflejar en el ejercicio profesional?</b>
+        <br>
+        Lo aprendido puede aplicarse en el ejercicio profesional al diseñar estrategias de intervención educativa, psicológica o social que estén alineadas con las necesidades específicas de los adolescentes. Por ejemplo, entender las diferencias entre hombres y mujeres en la adolescencia permite desarrollar enfoques más personalizados para trabajar con ellos, ya sea en el ámbito educativo, de orientación vocacional o de salud mental. Esto también contribuye a fomentar una comunicación más efectiva y empática con adolescentes y sus familias.
+    </p>
+
+    <br>
+    <br>
+    <!-- Modal -->
+  <div class="modal" [ngClass]="{'show': isModalOpen}" (click)="closeModal()">
+    <div class="modal-content" (click)="$event.stopPropagation()">
+      <h2>Acontecimientos evolutivos en la adolescencia</h2>
+      <div class="video-container">
+        <video #videoPlayer width="560" height="315" controls>
+          <source src="assets/vid/bitacora.mp4" type="video/mp4" />
+          Tu navegador no soporta el elemento de video.
+        </video>
+      </div>
+      <button (click)="closeModal()">Cerrar</button>
+    </div>
+  </div>
+</section>
+

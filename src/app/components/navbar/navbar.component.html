@@ -1,0 +1,20 @@
+<nav class="navbar">
+  <!-- Logo o nombre de la página (opcional) -->
+  <div class="navbar-logo">
+    <a href="#">Mi Página</a>
+  </div>
+  
+  <!-- Botón de menú para móviles -->
+  <button class="navbar-toggle" (click)="toggleMenu()" aria-label="Toggle menu">
+    <span class="navbar-toggle-icon"></span>
+  </button>
+
+  <!-- Menú de navegación -->
+  <div class="navbar-links" [ngClass]="{'active': isMenuOpen}">
+    <a href="#section1">Infancia</a>
+    <a href="#section2">Adolescencia</a>
+    <a href="#section3">Adultez</a>
+    <a href="#section4">Bitácora</a>
+    <a href="#section5">Reflexiones</a>
+  </div>
+</nav>

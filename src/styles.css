@@ -1,1 +1,336 @@
-/* You can add global styles to this file, and also import other style files */
+/* Tipografía base y fondo general */
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap');
+
+/* Imagen de fondo general */
+body {
+  font-family: 'Dancing Script', cursive;
+  margin: 0;
+  padding: 0;
+  background: url('assets/img/fondo1.jpg') no-repeat center center fixed; /* Imagen de fondo */
+  background-size: cover; /* La imagen cubre toda la pantalla */
+  color: #333; /* Color base del texto */
+  font-weight:800;
+}
+
+/* Filtro para el fondo */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(247, 178, 207, 0.2); /* Filtro oscuro para mejorar la legibilidad */
+  z-index: -1; /* Mantiene el filtro detrás del contenido */
+}
+
+
+/* Títulos */
+h1, h2, h3 {
+  text-align: center;
+  color: #ff69b4; /* Rosa vibrante */
+  animation: waveText 2s infinite ease-in-out;
+  
+
+}
+
+@keyframes waveText {
+  0%, 100% {
+    transform: rotate(0);
+  }
+  50% {
+    transform: rotate(3deg); /* Pequeño movimiento de onda */
+  }
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+@keyframes sakuraGlow {
+  0% {
+      text-shadow: 0 0 10px #ffb7c5, 0 0 20px #ffb7c5, 0 0 30px #ff007f, 0 0 40px #ff007f, 0 0 50px #ff007f;
+      color: #ffb7c5;
+  }
+  50% {
+      text-shadow: 0 0 20px #ff77a9, 0 0 30px #ff77a9, 0 0 40px #ff47a1, 0 0 50px #ff47a1, 0 0 60px #ff77a9;
+      color: #ff77a9;
+  }
+  100% {
+      text-shadow: 0 0 10px #ffb7c5, 0 0 20px #ffb7c5, 0 0 30px #ff007f, 0 0 40px #ff007f, 0 0 50px #ff007f;
+      color: #ffb7c5;
+  }
+}
+
+b {
+  font-family: 'Poppins', sans-serif; /* Fuente limpia y moderna */
+  font-size: 1rem;
+  color: #f074cb; /* Color inicial pastel */
+  animation: sakura 3s infinite ease-in-out; /* Animación suave */
+}
+h2 {
+  font-family: 'Pacifico', cursive; /* Cambia a una fuente de Google Fonts si lo deseas */
+  text-align: center;
+  font-size: 3rem;
+  color: #ffb7c5;
+  background: linear-gradient(to right, #ffb7c5, #ff77a9, #ff47a1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: sakuraGlow 3s infinite alternate;
+  position: relative;
+}
+
+h2::before, h2::after {
+  content: '✿';
+  position: absolute;
+  font-size: 2rem;
+  color: #ff77a9;
+  animation: sakuraGlow 3s infinite alternate;
+}
+
+h2::before {
+  left: -50px;
+  top: 10px;
+}
+
+h2::after {
+  right: -50px;
+  top: 10px;
+}
+
+/* Botones */
+button {
+  background-color: #ffb6c1; /* Rosa pastel */
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  font-size: 1.2rem;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  animation: bounce 2s infinite alternate;
+}
+
+button:hover {
+  background-color: #ff69b4; /* Rosa más intenso */
+  transform: scale(1.1);
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Secciones */
+.section {
+  padding: 2rem;
+  margin: 2rem auto;
+  background: rgba(255, 225, 249, 0.6); /* Fondo suave */
+  border-radius: 15px;
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  color: black;
+  animation: fadeIn 1s ease-in-out;
+  font-weight:600;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Listas */
+.section ul {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+  margin: 1rem auto;
+}
+
+.section ul li {
+  position: relative;
+  padding-left: 2rem;
+  margin-bottom: 0.8rem;
+  color: #555;
+  font-size: 1.1rem;
+}
+
+.section ul li::before {
+  content: '🌸'; /* Icono floral */
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 1.2rem;
+}
+
+/* Imágenes */
+.section img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin: 1rem 0;
+  
+}
+
+
+/* Detalles flotantes adicionales */
+.flower {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50px;
+  height: 50px;
+  background: url('assets/img/sakura.png') no-repeat center;
+  background-size: contain;
+  animation: floatFlower 5s infinite alternate ease-in-out;
+}
+
+@keyframes floatFlower {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -45%) scale(1.2);
+    opacity: 0.8;
+  }
+}
+
+/* Aseguramos que las imágenes tengan el mismo tamaño y estén centradas */
+.imagenes {
+  display: flex;
+  justify-content: center; /* Centra las imágenes horizontalmente */
+  gap: 20px; /* Espacio entre las imágenes */
+  flex-wrap: wrap; /* Para que las imágenes no se desborden en pantallas pequeñas */
+  align-items: center; /* Alinea las imágenes verticalmente */
+}
+
+.imagenes img {
+  max-width: 100%; /* Asegura que las imágenes no excedan el tamaño del contenedor */
+  height: auto; /* Mantiene la relación de aspecto */
+  width: 300px; /* Establece un tamaño uniforme para las imágenes */
+  object-fit: cover; /* Asegura que la imagen cubra el área del contenedor sin distorsionarse */
+  border-radius: 10px; /* Opcional, para redondear las esquinas */
+}
+
+/* En pantallas pequeñas */
+@media (max-width: 768px) {
+  .imagenes img {
+      width: 100%; /* Las imágenes ocuparán todo el ancho disponible */
+      max-width: 500px; /* Limita el tamaño máximo para no ser demasiado grandes */
+  }
+}
+
+.container{
+  margin-top: 100px;
+}
+
+
+
+/* Estilos generales para el modal */
+.modal {
+  display: none; /* Ocultar por defecto */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente */
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Mostrar el modal cuando tiene la clase 'show' */
+.modal.show {
+  display: flex;
+}
+
+/* Contenedor del contenido del modal */
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  width: 90vw;
+  height: 90vh;
+  max-width: 600px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  position: relative;
+  overflow: auto;
+}
+
+/* Botón de cerrar */
+.modal-content button {
+  background-color: #e74c3c;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.modal-content button:hover {
+  background-color: #c0392b;
+}
+
+/* Contenedor del video */
+.video-container {
+  margin-top: 20px;
+}
+
+video {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* Encabezado y texto */
+.modal-content h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.modal-content p {
+  font-size: 16px;
+  margin: 10px 0;
+  color: #555;
+}
+
+#musicControls {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  z-index: 1000;
+}
+
+#musicControls button {
+  margin: 5px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4caf50;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#musicControls button:hover {
+  background-color: #45a049;
+}

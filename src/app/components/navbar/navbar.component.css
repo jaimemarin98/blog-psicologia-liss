@@ -1,0 +1,171 @@
+/* Navbar fijo en la parte superior */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(90deg, #f0cadf, #f79ccb); /* Efecto agua */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3); /* Sombra */
+    z-index: 1000;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between; /* Cambiado a space-between para tener espacio entre logo y menú */
+    align-items: center;
+    animation: navbarGlow 2s infinite alternate; /* Brillo animado */
+  }
+  
+  /* Brillo animado del navbar */
+  @keyframes navbarGlow {
+    0% {
+      box-shadow: 0px 0px 10px rgba(173, 216, 230, 0.5);
+    }
+    100% {
+      box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.7);
+    }
+  }
+  
+  /* Estilo para los enlaces */
+  .navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-left: 15px;
+    position: relative;
+    transition: transform 0.3s, color 0.3s;
+    text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.7); /* Brillo suave */
+  }
+  
+  /* Efecto de rotación y escala */
+  .navbar a:hover {
+    color: #d281f8; /* Cambia a dorado */
+    transform: scale(1.3) rotate(5deg); /* Escala y rotación */
+  }
+  
+  /* Animación de subrayado al pasar el cursor */
+  .navbar a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    width: 0;
+    height: 3px;
+    background: #d471fc; /* Línea dorada */
+    transition: width 0.3s ease, left 0.3s ease;
+  }
+  
+  .navbar a:hover::after {
+    width: 100%; /* La línea se expande */
+    left: 0; /* Alinea con el enlace */
+  }
+  
+  /* Ondas animadas debajo del navbar */
+  .navbar::before {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    width: 100%;
+    height: 15px;
+    background: url('https://www.transparenttextures.com/patterns/waves.png');
+    background-size: cover;
+    animation: waveEffect 4s linear infinite; /* Movimiento continuo */
+  }
+  
+  @keyframes waveEffect {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+  /* Brillo animado para cada enlace */
+  .navbar a {
+    animation: linkGlow 3s infinite alternate;
+  }
+  
+  @keyframes linkGlow {
+    0% {
+      text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.5);
+    }
+    100% {
+      text-shadow: 0px 0px 15px rgba(255, 255, 255, 1);
+    }
+  }
+  
+  /* Efecto flotante continuo en el navbar */
+  .navbar {
+    animation: floatEffect 3s ease-in-out infinite;
+  }
+  
+  @keyframes floatEffect {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-5px);
+    }
+  }
+  
+  /* Responsive para pantallas pequeñas */
+  @media (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      padding: 1rem;
+      align-items: flex-start;
+    }
+  
+    .navbar-links {
+      display: none;
+      width: 100%;
+      flex-direction: column;
+      margin-top: 1rem;
+    }
+  
+    .navbar-links.active {
+      display: flex;
+    }
+  
+    .navbar a {
+      margin: 0.5rem 0;
+    }
+  
+    /* Botón de menú */
+    .navbar-toggle {
+      display: block;
+      background: none;
+      border: none;
+      color: transparent;
+      font-size: 2rem;
+      cursor: pointer;
+    }
+  
+    .navbar-toggle-icon {
+      width: 30px;
+      height: 4px;
+      background-color: white;
+      position: relative;
+      display: block;
+      margin: 6px 0;
+    }
+  
+    .navbar-toggle-icon::before, .navbar-toggle-icon::after {
+      content: '';
+      width: 30px;
+      height: 4px;
+      background-color: white;
+      position: absolute;
+      left: 0;
+    }
+  
+    .navbar-toggle-icon::before {
+      top: -8px;
+    }
+  
+    .navbar-toggle-icon::after {
+      top: 8px;
+    }
+  }
+  

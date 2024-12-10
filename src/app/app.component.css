@@ -1,0 +1,39 @@
+.music-player {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: rgba(255, 183, 231, 0.7);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(250, 101, 255, 0.5);
+    z-index: 9999;
+  }
+  
+  select {
+    background-color: #da88c5;
+    color: white;
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+    margin-top: 10px;
+    width: 200px;
+  }
+  
+  p {
+    color: white;
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  button {
+    background-color: #ec2ed3;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  button:hover {
+    background-color: #f72eba;
+  }
+  
