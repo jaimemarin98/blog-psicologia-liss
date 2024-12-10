@@ -14,5 +14,7 @@ export const routes: Routes = [
   { path: 'blog/section3', component: Section3AdulthoodComponent },
   { path: 'blog/section4', component: Section4AcademicJournalComponent },
   { path: 'blog/section5', component: Section5FinalReflectionsComponent },
+  // Redirige cualquier otra ruta a blog/section1
+  { path: '**', redirectTo: '/blog/section1' }
 ];
 
